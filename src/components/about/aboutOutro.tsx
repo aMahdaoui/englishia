@@ -20,7 +20,7 @@ function AboutOutro() {
 
 
                 ))}
-                <div className="flex-auto w-[600px]">
+                <div className=" flex-grow-0 basis-80 md:basis-auto m-auto">
                     {/* <div className="md:absolute md:left-0 md:bottom-0"> */}
                     <Image
                         src="/images-book.png"

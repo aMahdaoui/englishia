@@ -1,12 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 
-
-import { ABOUT_SECTION } from '@/config/data'
-import SectionHeading from '../common'
-import AboutActions from './aboutActions'
 import Section from '../common/section'
-import AboutFeatures from './coursesList'
 import CoursesList from './coursesList'
 
 function Courses() {

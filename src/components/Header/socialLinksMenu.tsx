@@ -28,7 +28,7 @@ import { SOCIAL_MEDIA_LINKS } from '@/config/data'
 export default function SocialLinksMenu() {
     // const [selectedItem, setSelectedItem] = useState(items[0])
     return (
-        <ul className='flex gap-2'>
+        <ul className='hidden sm:flex gap-2'>
             <li className={`my-auto px-2 py-2`}>
                 <a href={SOCIAL_MEDIA_LINKS.github} rel="noreferrer" target="_blank">
                     <AiOutlineTwitter

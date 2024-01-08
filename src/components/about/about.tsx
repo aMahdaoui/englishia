@@ -14,18 +14,18 @@ function About() {
         <>
             <Section id='about' heading='About us'>
                 <AboutFeatures />
-                <div className="flex gap-4 my-16">
+                <div className="flex gap-4 my-16 flex-col-reverse md:flex-row">
                     <Image
                         src="/about.jpg"
                         alt="Englishia logo"
-                        className="max-w-[50%] dark:invert"
+                        className="md:max-w-[50%] dark:invert"
                         width={1000}
                         height={24}
                         priority
                     />
                     <div>
 
-                        <h1 className="font-bold text-2xl py-4">
+                        <h1 className="font-bold text-2xl py-4 text-center">
                             {ABOUT_SECTION.title}
                         </h1>
                         <p className="">

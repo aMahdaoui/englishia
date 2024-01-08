@@ -51,7 +51,7 @@ function CourseDescription({ title, price, starts, reviews }: Record<string, str
 }
 export default function CoursesList() {
     return (
-        <div className='flex gap-10 w-full  mt-6' >{
+        <div className='flex gap-10 w-full  mt-6 flex-wrap md:flex-nowrap' >{
             [0, 1, 2].map((feature, index) => (
 
                 <motion.div

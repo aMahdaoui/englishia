@@ -13,7 +13,7 @@ import { ABOUT_FEATURES } from "@/config/data";
 {/* <div className="flex hover:scale-110 bg-blue-200 hover:bg-red-200"  > */ }
 export default function AboutFeatures() {
     return (
-        <div className='grid grid-cols-4 gap-10 w-full mt-6' >{
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 w-full mt-6' >{
             ABOUT_FEATURES.map((feature, index) => (
 
                 <motion.div
