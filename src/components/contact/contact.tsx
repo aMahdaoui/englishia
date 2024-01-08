@@ -74,16 +74,6 @@ function Contact() {
             </motion.section>
         </Section>
     );
-    // return (
-    //     <Section id='contact' heading='Get in touch with us'>
-    //         <h3 className="text-3xl text-center">Snaps from our popular courses</h3>
-
-
-
-
-
-    //     </Section>
-    // )
 }
 
 export default Contact

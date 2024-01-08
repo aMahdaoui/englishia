@@ -2,15 +2,14 @@
 
 
 'use client'
-import { FaArrowRight, FaBook, FaComment, FaGlobe, FaGraduationCap, FaHome } from "react-icons/fa";
-import { motion } from "framer-motion"
-
 import React from 'react'
-import { TFeatures } from "./types";
+import { motion } from "framer-motion"
+import { FaBook, FaComment, FaGlobe, FaGraduationCap, FaHome } from "react-icons/fa";
+
+import { fadeInAnimationVariants } from "../utils/animations";
+
 import { ABOUT_FEATURES } from "@/config/data";
 
-{/* style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" */ }
-{/* <div className="flex hover:scale-110 bg-blue-200 hover:bg-red-200"  > */ }
 export default function AboutFeatures() {
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 w-full mt-6' >{
@@ -23,9 +22,13 @@ export default function AboutFeatures() {
                         scale: 1.1,
                         transition: { duration: 0.5 },
                     }}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                        once: true,
+                    }}
+                    custom={index}
                 >
                     <div className="flex"
                     >

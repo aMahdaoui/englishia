@@ -2,16 +2,13 @@
 
 
 'use client'
-import { FaArrowRight, FaBook, FaClock, FaComment, FaGlobe, FaGraduationCap, FaHome, FaStar, FaTimesCircle, FaUser, FaUserTie } from "react-icons/fa";
-import { motion } from "framer-motion"
-
 import React from 'react'
-import { TFeatures } from "./types";
-import { ABOUT_FEATURES } from "@/config/data";
-import Image from "next/image";
+import { motion } from "framer-motion"
+import { FaBook, FaClock, FaComment, FaGlobe, FaGraduationCap, FaHome, FaStar, FaTimesCircle, FaUser, FaUserTie } from "react-icons/fa";
 
-{/* style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" */ }
-{/* <div className="flex hover:scale-110 bg-blue-200 hover:bg-red-200"  > */ }
+import Image from "next/image";
+import { fadeInAnimationVariants } from "../utils/animations";
+import { ABOUT_FEATURES } from "@/config/data";
 
 
 function Starts({ stars, reviews }: { stars: number, reviews: number }) {
@@ -57,9 +54,13 @@ export default function CoursesList() {
                 <motion.div
                     key={`${feature}-${index}`}
                     className=" overflow-hidden group flex-auto   bg-blue-50 hover:bdg-red-200"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                        once: true,
+                    }}
+                    custom={index}
                 >
                     <div className="w-full overflow-hidden"><Image
                         src="/course-1.jpg"
